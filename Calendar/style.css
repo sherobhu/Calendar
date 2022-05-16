@@ -1,0 +1,116 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+.flex {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.container {
+  width: 100%;
+  height: 100vh;
+  background-color: rgb(33, 32, 32);
+}
+/* @learnwithshero  */
+
+.calendar {
+  width: 430px;
+  height: 500px;
+  background-color: white;
+  box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.669),
+    -10px -10px 20px rgba(0, 0, 0, 0.436);
+}
+
+.calendar .month {
+  width: 100%;
+  height: 20%;
+  padding: 20px 30px;
+  background-color: #ff9a8b;
+  background-image: linear-gradient(
+    90deg,
+    #ff9a8b 0%,
+    #ff6a88 55%,
+    #ff99ac 100%
+  );
+  justify-content: space-between !important;
+  text-align: center;
+}
+.calendar .month img {
+  width: 26px;
+  height: 26px;
+  cursor: pointer;
+  transition: 0.1s;
+}
+.month img:hover{
+    opacity: 0.8;
+}
+.month h1 {
+  text-transform: uppercase;
+  font-size: 30px;
+}
+.month p {
+  font-weight: 300;
+  color: rgba(0, 0, 0, 0.797);
+  font-family: cursive;
+}
+/* @learnwithshero  */
+.weekdays {
+  width: 100%;
+  padding: 10px;
+  height: 10%;
+  padding-bottom: 0;
+}
+.weekdays div {
+  width: calc(430px / 7);
+  height: 80%;
+  text-align: center;
+  font-size: 16px;
+  font-weight: 500;
+  margin: 0 5px;
+  transition: 0.2s;
+}
+.days {
+  width: 100%;
+  height: 70%;
+  flex-wrap: wrap;
+  margin: auto;
+  padding: 30px 10px;
+  padding-top: 0;
+}
+.days div {
+  width: calc(400px / 7);
+  height: calc(400px / 7);
+  text-align: center;
+  font-size: 13.5px;
+  font-family: cursive;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: 0.1s;
+}
+
+.days .previous-days,
+.days .next-days {
+    color: rgba(0, 0, 0, 0.349);
+}
+.days .today {
+    background-color: #ff6a88;
+    cursor: pointer;
+    color: white;
+    border-radius: 50%;
+  transition: 0.2s;
+}
+.days .today:hover {
+  background-color: #f95c79;
+}
+.days div:not(.today):hover{
+    border-radius: 0;
+    border: 0.5px solid black;
+    background-color: rgba(0, 0, 0, 0.215);
+    cursor: pointer;
+}
